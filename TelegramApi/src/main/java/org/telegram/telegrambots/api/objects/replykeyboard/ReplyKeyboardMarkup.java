@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

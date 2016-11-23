@@ -7,6 +7,8 @@ import javax.ws.rs.Path;
 
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboard;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

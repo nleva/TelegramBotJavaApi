@@ -2,6 +2,8 @@ package org.telegram.telegrambots.api.objects.replykeyboard.buttons;
 
 import org.telegram.telegrambots.api.objects.ApiObject;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

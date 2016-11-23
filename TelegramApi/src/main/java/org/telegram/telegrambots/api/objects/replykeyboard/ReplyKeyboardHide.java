@@ -1,5 +1,7 @@
 package org.telegram.telegrambots.api.objects.replykeyboard;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

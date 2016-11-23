@@ -3,6 +3,8 @@ package org.telegram.telegrambots.api.objects.inlinequery.result;
 import org.telegram.telegrambots.api.objects.inlinequery.inputmessagecontent.InputMessageContent;
 import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

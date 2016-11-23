@@ -1,5 +1,7 @@
 package org.telegram.telegrambots.api.objects.inlinequery.inputmessagecontent;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
