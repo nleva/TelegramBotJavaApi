@@ -21,16 +21,16 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultVideo extends InlineQueryResult{
     String id; ///< Unique identifier of this result
-    String mimeType; ///< Mime type of the content of video url, i.e. “text/html” or “video/mp4”
-    String videoUrl; ///< A valid URL for the embedded video player or video file
-    Integer videoWidth; ///< Optional. Video width
-    Integer videoHeight; ///< Optional. Video height
-    Integer videoDuration; ///< Optional. Video duration in seconds
-    String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the video
+    @JsonProperty("mime_type") String mimeType; ///< Mime type of the content of video url, i.e. “text/html” or “video/mp4”
+    @JsonProperty("video_url") String videoUrl; ///< A valid URL for the embedded video player or video file
+    @JsonProperty("video_width") Integer videoWidth; ///< Optional. Video width
+    @JsonProperty("video_height") Integer videoHeight; ///< Optional. Video height
+    @JsonProperty("video_duration") Integer videoDuration; ///< Optional. Video duration in seconds
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the video
     String title; ///< Optional. Title for the result
     String description; ///< Optional. Short description of the result
     String caption; ///< Optional. Caption of the video to be sent, 0-200 characters
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

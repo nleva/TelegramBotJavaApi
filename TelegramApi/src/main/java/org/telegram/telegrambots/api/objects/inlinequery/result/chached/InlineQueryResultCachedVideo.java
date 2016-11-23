@@ -22,11 +22,11 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultCachedVideo extends InlineQueryResult{
     String id; ///< Unique identifier of this result
-    String videoFileId; ///< A valid file identifier for the video file
+    @JsonProperty("video_file_id") String videoFileId; ///< A valid file identifier for the video file
     String title; ///< Optional. Title for the result
     String description; ///< Optional. Short description of the result
     String caption; ///< Optional. Caption of the video to be sent, 0-200 characters
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

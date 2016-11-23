@@ -21,6 +21,6 @@ public class InputVenueMessageContent extends InputMessageContent{
     Float longitude; ///< Longitude of the venue in degrees
     String title; ///< Name of the venue
     String address; ///< Address of the venue
-    String foursquareId; ///< Optional. Foursquare identifier of the venue, if known
+    @JsonProperty("foursquare_id") String foursquareId; ///< Optional. Foursquare identifier of the venue, if known
 
 }

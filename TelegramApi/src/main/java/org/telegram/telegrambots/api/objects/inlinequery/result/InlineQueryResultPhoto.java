@@ -21,15 +21,15 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultPhoto extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
-    String photoUrl; ///< A valid URL of the photo. Photo size must not exceed 5MB
-    String mimeType; ///< Optional. MIME type of the photo, defaults to image/jpeg
-    Integer photoWidth; ///< Optional. Width of the photo
-    Integer photoHeight; ///< Optional. Height of the photo
-    String thumbUrl; ///< Optional. URL of the thumbnail for the photo
+    @JsonProperty("photo_url") String photoUrl; ///< A valid URL of the photo. Photo size must not exceed 5MB
+    @JsonProperty("mime_type") String mimeType; ///< Optional. MIME type of the photo, defaults to image/jpeg
+    @JsonProperty("photo_width") Integer photoWidth; ///< Optional. Width of the photo
+    @JsonProperty("photo_height") Integer photoHeight; ///< Optional. Height of the photo
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of the thumbnail for the photo
     String title; ///< Optional. Title for the result
     String description; ///< Optional. Short description of the result
     String caption; ///< Optional. Caption of the photo to be sent
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

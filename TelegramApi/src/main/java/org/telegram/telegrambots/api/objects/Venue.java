@@ -18,6 +18,6 @@ public class Venue extends ApiObject {
     Location location; ///< Venue location
     String title; ///< Name of the venue
     String address; ///< Address of the venue
-    String foursquareId; ///< Optional. Foursquare identifier of the venue
+    @JsonProperty("foursquare_id") String foursquareId; ///< Optional. Foursquare identifier of the venue
 
 }

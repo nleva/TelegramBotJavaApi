@@ -24,8 +24,8 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultCachedSticker extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
-    String stickerFileId; ///< A valid file identifier of the sticker
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the sticker
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("sticker_file_id") String stickerFileId; ///< A valid file identifier of the sticker
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the sticker
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

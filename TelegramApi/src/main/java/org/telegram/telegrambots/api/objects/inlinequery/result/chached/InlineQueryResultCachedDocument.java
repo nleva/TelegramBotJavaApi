@@ -26,10 +26,10 @@ import lombok.ToString;
 public class InlineQueryResultCachedDocument extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
     String title; ///< Optional. Title for the result
-    String documentFileId; ///< A valid file identifier for the file
+    @JsonProperty("document_file_id") String documentFileId; ///< A valid file identifier for the file
     String description; ///< Optional. Short description of the result
     String caption; ///< Optional. Caption of the document to be sent, 0-200 characters
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the file
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the file
 
 }

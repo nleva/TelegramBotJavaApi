@@ -24,7 +24,7 @@ import lombok.ToString;
 @ToString(callSuper=true)
 @Path("sendvideo")
 public class SendVideo extends ApiMethod{
-    String chatId; ///< Unique identifier for the chat to send the message to (Or username for channels)
+    @JsonProperty("chat_id") String chatId; ///< Unique identifier for the chat to send the message to (Or username for channels)
     String video; ///< Video to send. file_id as String to resend a video that is already on the Telegram servers
     Integer duration; ///< Optional. Duration of sent video in seconds
     String caption; ///< OptionaL. Video caption (may also be used when resending videos by file_id).
@@ -34,14 +34,14 @@ public class SendVideo extends ApiMethod{
      * Optional. Sends the message silently. iOS users will not receive a notification, Android
      * users will receive a notification with no sound. Other apps coming soon
      */
-    Boolean disableNotification;
-    Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
-    ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
+    @JsonProperty("disable_notification") Boolean disableNotification;
+    @JsonProperty("reply_to_message_id") Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
+    @JsonProperty("reply_markup") ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
 
-    boolean isNewVideo; ///< True to upload a new video, false to use a fileId
-    String videoName; ///< Name of the video
-    File newVideoFile; ///< New video file
-    InputStream newVideoStream; ///< New video stream
+    @JsonProperty("is_new_video") boolean isNewVideo; ///< True to upload a new video, false to use a fileId
+    @JsonProperty("video_name") String videoName; ///< Name of the video
+    @JsonProperty("new_video_file") File newVideoFile; ///< New video file
+    @JsonProperty("new_video_stream") InputStream newVideoStream; ///< New video stream
 
    
 }

@@ -24,20 +24,20 @@ import lombok.ToString;
 @ToString(callSuper=true)
 @Path("senddocument")
 public class SendDocument extends ApiMethod{
-    String chatId; ///< Unique identifier for the chat to send the message to or Username for the channel to send the message to
+    @JsonProperty("chat_id") String chatId; ///< Unique identifier for the chat to send the message to or Username for the channel to send the message to
     String document; ///< File file to send. file_id as String to resend a file that is already on the Telegram servers
     String caption; ///< Optional. Document caption (may also be used when resending documents by file_id), 0-200 characters
     /**
      * Optional. Sends the message silently. iOS users will not receive a notification, Android
      * users will receive a notification with no sound. Other apps coming soon
      */
-    Boolean disableNotification;
-    Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
-    ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
+    @JsonProperty("disable_notification") Boolean disableNotification;
+    @JsonProperty("reply_to_message_id") Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
+    @JsonProperty("reply_markup") ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
 
-    boolean isNewDocument; ///< True to upload a new document, false to use a fileId
-    String documentName;
-    File newDocumentFile; ///< New document file
-    InputStream newDocumentStream; ///< New document stream
+    @JsonProperty("is_new_document") boolean isNewDocument; ///< True to upload a new document, false to use a fileId
+    @JsonProperty("document_name") String documentName;
+    @JsonProperty("new_document_file") File newDocumentFile; ///< New document file
+    @JsonProperty("new_document_stream") InputStream newDocumentStream; ///< New document stream
 
 }

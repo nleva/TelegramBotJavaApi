@@ -16,9 +16,9 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class Contact extends ApiObject {
-    String phoneNumber; ///< Contact's phone number
-    String firstName; ///< Contact's first name
-    String lastName; ///< Optional. Contact's last name
+    @JsonProperty("phone_number") String phoneNumber; ///< Contact's phone number
+    @JsonProperty("first_name") String firstName; ///< Contact's first name
+    @JsonProperty("last_name") String lastName; ///< Optional. Contact's last name
     Integer userID; ///< Optional. Contact's user identifier in Telegram
 
 }

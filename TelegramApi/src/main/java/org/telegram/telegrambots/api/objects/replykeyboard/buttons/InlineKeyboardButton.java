@@ -22,7 +22,7 @@ import lombok.ToString;
 public class InlineKeyboardButton extends ApiObject {
     String text; ///< Label text on the button
     String url; ///< Optional. HTTP url to be opened when button is pressed
-    String callbackData; ///< Optional. Data to be sent in a callback query to the bot when button is pressed
+    @JsonProperty("callback_data") String callbackData; ///< Optional. Data to be sent in a callback query to the bot when button is pressed
     /**
      * Optional.
      * If set, pressing the button will prompt the user to select one of their chats,
@@ -33,7 +33,7 @@ public class InlineKeyboardButton extends ApiObject {
      * Especially useful when combined with switch_pm… actions – in this case the user will
      * be automatically returned to the chat they switched from, skipping the chat selection screen.
      */
-    String switchInlineQuery;
+    @JsonProperty("switch_inline_query") String switchInlineQuery;
 
     
 }

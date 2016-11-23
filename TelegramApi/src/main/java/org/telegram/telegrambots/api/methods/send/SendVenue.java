@@ -29,11 +29,11 @@ public class SendVenue extends ApiMethod {
      * Optional. Sends the message silently. iOS users will not receive a notification, Android
      * users will receive a notification with no sound. Other apps coming soon
      */
-    Boolean disableNotification;
+    @JsonProperty("disable_notification") Boolean disableNotification;
     String address; ///< Address of the venue
-    String foursquareId; ///< Optional. Foursquare identifier of the venue
-    Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
-    ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
+    @JsonProperty("foursquare_id") String foursquareId; ///< Optional. Foursquare identifier of the venue
+    @JsonProperty("reply_to_message_id") Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
+    @JsonProperty("reply_markup") ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
 
     
 }

@@ -21,12 +21,12 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultGif extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
-    String gifUrl; ///< A valid URL for the GIF file. File size must not exceed 1MB
-    Integer gifWidth; ///< Optional. Width of the GIF
-    Integer gifHeight; ///< Optional. Height of the GIF
-    String thumbUrl; ///< Optional. URL of a static thumbnail for the result (jpeg or gif)
+    @JsonProperty("gif_url") String gifUrl; ///< A valid URL for the GIF file. File size must not exceed 1MB
+    @JsonProperty("gif_width") Integer gifWidth; ///< Optional. Width of the GIF
+    @JsonProperty("gif_height") Integer gifHeight; ///< Optional. Height of the GIF
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of a static thumbnail for the result (jpeg or gif)
     String title; ///< Optional. Title for the result
     String caption; ///< Optional. Caption of the GIF file to be sent
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the GIF animation
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the GIF animation
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 }

@@ -26,9 +26,9 @@ public class InlineQueryResultLocation extends InlineQueryResult{
     String title; ///< Optional. Location title
     Float latitude; ///< Location latitude in degrees
     Float longitude; ///< Location longitude in degrees
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent
-    String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
-    Integer thumbWidth; ///< Optional. Thumbnail width
-    Integer thumbHeight; ///< Optional. Thumbnail height
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
+    @JsonProperty("thumb_width") Integer thumbWidth; ///< Optional. Thumbnail width
+    @JsonProperty("thumb_height") Integer thumbHeight; ///< Optional. Thumbnail height
 }

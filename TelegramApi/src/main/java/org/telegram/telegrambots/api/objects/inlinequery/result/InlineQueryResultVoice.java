@@ -23,9 +23,9 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultVoice extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
-    String voiceUrl; ///< A valid URL for the voice recording
+    @JsonProperty("voice_url") String voiceUrl; ///< A valid URL for the voice recording
     String title; ///< Recording title
-    Integer voiceDuration; ///< Optional. Recording duration in seconds
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the voice recording
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("voice_duration") Integer voiceDuration; ///< Optional. Recording duration in seconds
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the voice recording
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 }

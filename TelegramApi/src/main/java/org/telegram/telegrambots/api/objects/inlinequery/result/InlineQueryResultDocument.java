@@ -25,14 +25,14 @@ import lombok.ToString;
 public class InlineQueryResultDocument extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
     String title; ///< Optional. Title for the result
-    String documentUrl; ///< A valid URL for the file
-    String mimeType; ///< Mime type of the content of the file, either “application/pdf” or “application/zip”
+    @JsonProperty("document_url") String documentUrl; ///< A valid URL for the file
+    @JsonProperty("mime_type") String mimeType; ///< Mime type of the content of the file, either “application/pdf” or “application/zip”
     String description; ///< Optional. Short description of the result
     String caption; ///< Optional. Caption of the document to be sent, 0-200 characters
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the file
-    String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
-    Integer thumbWidth; ///< Optional. Thumbnail width
-    Integer thumbHeight; ///< Optional. Thumbnail height
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the file
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
+    @JsonProperty("thumb_width") Integer thumbWidth; ///< Optional. Thumbnail width
+    @JsonProperty("thumb_height") Integer thumbHeight; ///< Optional. Thumbnail height
 
 }

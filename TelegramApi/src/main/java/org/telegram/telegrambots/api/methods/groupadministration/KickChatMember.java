@@ -29,9 +29,9 @@ public class KickChatMember extends ApiMethod {
 	/**
 	 * Unique identifier for the chat to send the message to (Or username for channels)
 	 */
-    String chatId; 
+    @JsonProperty("chat_id") String chatId; 
     /**
      * Unique identifier of the target user
      */
-    Integer userId; 
+    @JsonProperty("user_id") Integer userId; 
 }

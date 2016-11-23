@@ -14,8 +14,8 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class User extends ApiObject{
     Long id; ///< Unique identifier for this user or bot
-    String firstName; ///< User‘s or bot’s first name
-    String lastName; ///< Optional. User‘s or bot’s last name
-    String userName; ///< Optional. User‘s or bot’s username
+    @JsonProperty("first_name") String firstName; ///< User‘s or bot’s first name
+    @JsonProperty("last_name") String lastName; ///< Optional. User‘s or bot’s last name
+    @JsonProperty("user_name") String userName; ///< Optional. User‘s or bot’s username
 
 }

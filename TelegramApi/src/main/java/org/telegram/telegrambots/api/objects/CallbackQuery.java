@@ -28,7 +28,7 @@ public class CallbackQuery extends ApiObject {
      * @note The message content and message date will not be available if the message is too old
      */
     Message message;
-    String inlineMessageId; ///< Optional. Identifier of the message sent via the bot in inline mode, that originated the query
+    @JsonProperty("inline_message_id") String inlineMessageId; ///< Optional. Identifier of the message sent via the bot in inline mode, that originated the query
     /**
      * Data associated with the callback button.
      * @note Be aware that a bad client can send arbitrary data in this field

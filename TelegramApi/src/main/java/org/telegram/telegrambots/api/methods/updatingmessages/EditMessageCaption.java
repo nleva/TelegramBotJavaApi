@@ -26,17 +26,17 @@ public class EditMessageCaption extends ApiMethod {
      * Required if inline_message_id is not specified. Unique identifier for the chat to send the
      * message to (Or username for channels)
      */
-    String chatId;
+    @JsonProperty("chat_id") String chatId;
     /**
      * Required if inline_message_id is not specified. Unique identifier of the sent message
      */
-    Integer messageId;
+    @JsonProperty("message_id") Integer messageId;
     /**
      * Required if chat_id and message_id are not specified. Identifier of the inline message
      */
-    String inlineMessageId;
+    @JsonProperty("inline_message_id") String inlineMessageId;
     String caption; ///< Optional. New caption of the message
-    InlineKeyboardMarkup replyMarkup; ///< Optional. A JSON-serialized object for an inline keyboard.
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. A JSON-serialized object for an inline keyboard.
 
     
 }

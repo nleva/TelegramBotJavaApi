@@ -24,6 +24,6 @@ public class GetChatMemberCount extends ApiMethod {
 	/**
 	 * Unique identifier for the chat to send the message to (Or username for channels)
 	 */
-    String chatId;
+    @JsonProperty("chat_id") String chatId;
 
 }

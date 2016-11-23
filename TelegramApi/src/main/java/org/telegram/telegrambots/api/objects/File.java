@@ -15,8 +15,8 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class File extends ApiObject {
-    String fileId; ///< Unique identifier for this file
-    Integer fileSize; ///< Optional. File size, if known
-    String filePath; ///< Optional. File path. Use https://api.telegram.org/file/bot<token>/<file_path> to get the file.
+    @JsonProperty("file_id") String fileId; ///< Unique identifier for this file
+    @JsonProperty("file_size") Integer fileSize; ///< Optional. File size, if known
+    @JsonProperty("file_path") String filePath; ///< Optional. File path. Use https://api.telegram.org/file/bot<token>/<file_path> to get the file.
 
 }

@@ -26,7 +26,7 @@ public class SendChatAction extends ApiMethod {
 	/**
 	 * Unique identifier for the chat to send the message to (Or username for channels)
 	 */
-    String chatId; 
+    @JsonProperty("chat_id") String chatId; 
     /**
      * Type of action to broadcast. Choose one, depending on what the user is about to receive:
      * 'typing' for text messages 'upload_photo' for photos 'record_video' or 'upload_video' for

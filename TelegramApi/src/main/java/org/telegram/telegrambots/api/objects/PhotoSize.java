@@ -14,10 +14,10 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class PhotoSize extends ApiObject {
-    String fileId; ///< Unique identifier for this file
+    @JsonProperty("file_id") String fileId; ///< Unique identifier for this file
     Integer width; ///< Photo width
     Integer height; ///< Photo height
-    Integer fileSize; ///< Optional. File size
-    String filePath; ///< Undocumented field. Optional. Can contain the path to download the file direclty without calling to getFile
+    @JsonProperty("file_size") Integer fileSize; ///< Optional. File size
+    @JsonProperty("file_path") String filePath; ///< Undocumented field. Optional. Can contain the path to download the file direclty without calling to getFile
 
 }

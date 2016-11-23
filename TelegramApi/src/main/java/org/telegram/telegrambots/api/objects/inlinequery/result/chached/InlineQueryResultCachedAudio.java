@@ -24,7 +24,7 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultCachedAudio extends InlineQueryResult{
     String id; ///< Unique identifier of this result
-    String audioFileId; ///< A valid file identifier for the audio file
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the audio
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("audio_file_id") String audioFileId; ///< A valid file identifier for the audio file
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the audio
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 }

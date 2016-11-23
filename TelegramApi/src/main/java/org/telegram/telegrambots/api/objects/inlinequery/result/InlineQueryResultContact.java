@@ -23,13 +23,13 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultContact extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
-    String phoneNumber; ///< Contact's phone number
-    String firstName; ///< Contact's first name
-    String lastName; ///< Contact's last name
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent
-    String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
-    Integer thumbWidth; ///< Optional. Thumbnail width
-    Integer thumbHeight; ///< Optional. Thumbnail height
+    @JsonProperty("phone_number") String phoneNumber; ///< Contact's phone number
+    @JsonProperty("first_name") String firstName; ///< Contact's first name
+    @JsonProperty("last_name") String lastName; ///< Contact's last name
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
+    @JsonProperty("thumb_width") Integer thumbWidth; ///< Optional. Thumbnail width
+    @JsonProperty("thumb_height") Integer thumbHeight; ///< Optional. Thumbnail height
 
 }

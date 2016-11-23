@@ -30,5 +30,5 @@ public class GetFile extends ApiMethod {
 	/**
 	 * File identifier to get info about
 	 */
-    String fileId; 
+    @JsonProperty("file_id") String fileId; 
 }

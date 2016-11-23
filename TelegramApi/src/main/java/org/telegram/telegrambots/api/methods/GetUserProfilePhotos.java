@@ -24,7 +24,7 @@ public class GetUserProfilePhotos extends ApiMethod {
     /**
      * Unique identifier of the target user
      */
-    Integer userId; 
+    @JsonProperty("user_id") Integer userId; 
     /**
      * Sequential number of the first photo to be returned. By default, all photos are returned.
      */

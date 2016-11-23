@@ -15,11 +15,11 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class Sticker extends ApiObject {
-    String fileId; ///< Unique identifier for this file
+    @JsonProperty("file_id") String fileId; ///< Unique identifier for this file
     Integer width; ///< Sticker width
     Integer height; ///< Sticker height
     PhotoSize thumb; ///< Optional. Sticker thumbnail in .webp or .jpg format
-    Integer fileSize; ///< Optional. File size
+    @JsonProperty("file_size") Integer fileSize; ///< Optional. File size
     String emoji; ///< Optional. Emoji associated with the sticker
 
 }

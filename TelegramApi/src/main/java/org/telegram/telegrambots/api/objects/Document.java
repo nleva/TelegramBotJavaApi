@@ -16,10 +16,10 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class Document extends ApiObject {
-    String fileId; ///< Unique identifier for this file
+    @JsonProperty("file_id") String fileId; ///< Unique identifier for this file
     PhotoSize thumb; ///< Document thumbnail as defined by sender
-    String fileName; ///< Optional. Original filename as defined by sender
-    String mimeType; ///< Optional. Mime type of a file as defined by sender
-    Integer fileSize; ///< Optional. File size
+    @JsonProperty("file_name") String fileName; ///< Optional. Original filename as defined by sender
+    @JsonProperty("mime_type") String mimeType; ///< Optional. Mime type of a file as defined by sender
+    @JsonProperty("file_size") Integer fileSize; ///< Optional. File size
 
 }

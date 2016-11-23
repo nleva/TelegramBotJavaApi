@@ -25,7 +25,7 @@ public class InlineQueryResultCachedMpeg4Gif extends InlineQueryResult{
     String mpeg4FileId; ///< A valid file identifier for the MP4 file
     String title; ///< Optional. Title for the result
     String caption; ///< Optional. Caption of the MPEG-4 file to be sent
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the photo
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

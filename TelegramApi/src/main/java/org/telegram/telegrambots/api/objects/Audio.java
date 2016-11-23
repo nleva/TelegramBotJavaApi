@@ -16,10 +16,10 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=false)
 public class Audio extends ApiObject {
 
-    String fileId; ///< Unique identifier for this file
+    @JsonProperty("file_id") String fileId; ///< Unique identifier for this file
     Integer duration; ///< Integer	Duration of the audio in seconds as defined by sender
-    String mimeType; ///< Optional. MIME type of the file as defined by sender
-    Integer fileSize; ///< Optional. File size
+    @JsonProperty("mime_type") String mimeType; ///< Optional. MIME type of the file as defined by sender
+    @JsonProperty("file_size") Integer fileSize; ///< Optional. File size
     String title; ///< Optional. Title of the audio as defined by sender or by audio tags
     String performer; ///< Optional. Performer of the audio as defined by sender or by audio tags
 

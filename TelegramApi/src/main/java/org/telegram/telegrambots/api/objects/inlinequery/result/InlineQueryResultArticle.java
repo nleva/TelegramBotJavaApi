@@ -19,13 +19,13 @@ import lombok.ToString;
 public class InlineQueryResultArticle extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
     String title; ///< Title of the result
-    InputMessageContent inputMessageContent; ///< Content of the message to be sent
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Content of the message to be sent
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
     String url; ///< Optional. URL of the result
-    Boolean hideUrl; ///< Optional. Pass True, if you don't want the URL to be shown in the message
+    @JsonProperty("hide_url") Boolean hideUrl; ///< Optional. Pass True, if you don't want the URL to be shown in the message
     String description; ///< Optional. Short description of the result
-    String thumbUrl; ///< Optional. Url of the thumbnail for the result
-    Integer thumbWidth; ///< Optional. Thumbnail width
-    Integer thumbHeight; ///< Optional. Thumbnail height
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. Url of the thumbnail for the result
+    @JsonProperty("thumb_width") Integer thumbWidth; ///< Optional. Thumbnail width
+    @JsonProperty("thumb_height") Integer thumbHeight; ///< Optional. Thumbnail height
 
 }

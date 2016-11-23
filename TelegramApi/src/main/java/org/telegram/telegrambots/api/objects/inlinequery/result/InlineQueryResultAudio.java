@@ -23,11 +23,11 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultAudio extends InlineQueryResult{
     String id; ///< Unique identifier of this result
-    String audioUrl; ///< A valid URL for the audio file
+    @JsonProperty("audio_url") String audioUrl; ///< A valid URL for the audio file
     String title; ///< Optional. Title for the result
     String performer; ///< Optional. Performer
-    Integer audioDuration; ///< Optional. Audio duration in seconds
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the audio
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("audio_duration") Integer audioDuration; ///< Optional. Audio duration in seconds
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the audio
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

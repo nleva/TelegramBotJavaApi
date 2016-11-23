@@ -29,21 +29,21 @@ import lombok.ToString;
 public class SendAudio extends ApiMethod{
 
     Integer duration; ///< Integer	Duration of the audio in seconds as defined by sender
-    String chatId; ///< Unique identifier for the chat to send the message to (or Username fro channels)
+    @JsonProperty("chat_id") String chatId; ///< Unique identifier for the chat to send the message to (or Username fro channels)
     String audio; ///< Audio file to send. file_id as String to resend an audio that is already on the Telegram servers
-    Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
+    @JsonProperty("reply_to_message_id") Integer replyToMessageId; ///< Optional. If the message is a reply, ID of the original message
     /**
      * Optional. Sends the message silently. iOS users will not receive a notification, Android
      * users will receive a notification with no sound. Other apps coming soon
      */
-    Boolean disableNotification;
-    ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
+    @JsonProperty("disable_notification") Boolean disableNotification;
+    @JsonProperty("reply_markup") ReplyKeyboard replyMarkup; ///< Optional. JSON-serialized object for a custom reply keyboard
     String performer; ///< Optional. Performer of sent audio
     String title; ///< Optional. Title of sent audio
 
-    boolean isNewAudio; ///< True to upload a new audio, false to use a fileId
-    String audioName;
-    File newAudioFile; ///< New audio file
-    InputStream newAudioStream; ///< New audio stream
+    @JsonProperty("is_new_audio") boolean isNewAudio; ///< True to upload a new audio, false to use a fileId
+    @JsonProperty("audio_name") String audioName;
+    @JsonProperty("new_audio_file") File newAudioFile; ///< New audio file
+    @JsonProperty("new_audio_stream") InputStream newAudioStream; ///< New audio stream
    
 }

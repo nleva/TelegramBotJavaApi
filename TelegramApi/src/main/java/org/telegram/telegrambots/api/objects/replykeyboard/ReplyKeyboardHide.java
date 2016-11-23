@@ -18,7 +18,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class ReplyKeyboardHide extends ReplyKeyboard {
-    Boolean hideKeyboard; ///< Requests clients to hide the custom keyboard
+    @JsonProperty("hide_keyboard") Boolean hideKeyboard; ///< Requests clients to hide the custom keyboard
     /**
      * Optional. Use this parameter if you want to show the keyboard to specific users only.
      * Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's

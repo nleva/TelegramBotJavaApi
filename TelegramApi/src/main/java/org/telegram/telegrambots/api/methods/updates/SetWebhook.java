@@ -24,6 +24,6 @@ import lombok.ToString;
 @Path("setwebhook")
 public class SetWebhook extends ApiMethod{
     String url; ///< Optional. HTTPS url to send updates to. Use an empty string to remove webhook integration
-    String certificateFile; ///< Optional. Upload your public key certificate so that the root certificate in use can be checked
+    @JsonProperty("certificate_file") String certificateFile; ///< Optional. Upload your public key certificate so that the root certificate in use can be checked
 
 }

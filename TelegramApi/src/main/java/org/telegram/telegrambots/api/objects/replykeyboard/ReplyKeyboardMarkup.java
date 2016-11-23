@@ -20,8 +20,8 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class ReplyKeyboardMarkup extends ReplyKeyboard {
     List<KeyboardRow> keyboard; ///< Array of button rows, each represented by an Array of Strings
-    Boolean resizeKeyboard; ///< Optional. Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to false.
-    Boolean oneTimeKeyboad; ///< Optional. Requests clients to hide the keyboard as soon as it's been used. Defaults to false.
+    @JsonProperty("resize_keyboard") Boolean resizeKeyboard; ///< Optional. Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to false.
+    @JsonProperty("one_time_keyboad") Boolean oneTimeKeyboad; ///< Optional. Requests clients to hide the keyboard as soon as it's been used. Defaults to false.
     /**
      * Optional. Use this parameter if you want to show the keyboard to specific users only.
      * Targets:

@@ -22,10 +22,10 @@ import lombok.ToString;
 @ToString(callSuper=true)
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Update extends ApiObject{
-    Integer updateId;
+    @JsonProperty("update_id") Integer updateId;
     Message message; ///< Optional. New incoming message of any kind — text, photo, sticker, etc.
-    InlineQuery inlineQuery; ///< Optional. New incoming inline query
-    ChosenInlineQuery chosenInlineQuery; ///< Optional. The result of a inline query that was chosen by a user and sent to their chat partner
-    CallbackQuery callbackQuery; ///< Optional. New incoming callback query
-    Message editedMessage; ///< Optional. New version of a message that is known to the bot and was edited
+    @JsonProperty("inline_query") InlineQuery inlineQuery; ///< Optional. New incoming inline query
+    @JsonProperty("chosen_inline_query") ChosenInlineQuery chosenInlineQuery; ///< Optional. The result of a inline query that was chosen by a user and sent to their chat partner
+    @JsonProperty("callback_query") CallbackQuery callbackQuery; ///< Optional. New incoming callback query
+    @JsonProperty("edited_message") Message editedMessage; ///< Optional. New version of a message that is known to the bot and was edited
 }

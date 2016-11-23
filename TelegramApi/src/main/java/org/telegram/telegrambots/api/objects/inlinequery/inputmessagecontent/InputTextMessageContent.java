@@ -15,8 +15,8 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class InputTextMessageContent extends InputMessageContent{
-    String messageText; ///< Text of a message to be sent, 1-4096 characters
-    String parseMode; ///< Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in your bot's message.
-    Boolean disableWebPagePreview; ///< Optional. Disables link previews for links in the sent message
+    @JsonProperty("message_text") String messageText; ///< Text of a message to be sent, 1-4096 characters
+    @JsonProperty("parse_mode") String parseMode; ///< Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in your bot's message.
+    @JsonProperty("disable_web_page_preview") Boolean disableWebPagePreview; ///< Optional. Disables link previews for links in the sent message
 
 }

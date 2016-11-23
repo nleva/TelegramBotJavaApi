@@ -26,11 +26,11 @@ public class InlineQueryResultVenue extends InlineQueryResult{
     Float latitude; ///< Venue latitude in degrees
     Float longitude; ///< Venue longitude in degrees
     String address; ///< Address of the venue
-    String foursquareId; ///< Optional. Foursquare identifier of the venue if known
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent
-    String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
-    Integer thumbWidth; ///< Optional. Thumbnail width
-    Integer thumbHeight; ///< Optional. Thumbnail height
+    @JsonProperty("foursquare_id") String foursquareId; ///< Optional. Foursquare identifier of the venue if known
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent
+    @JsonProperty("thumb_url") String thumbUrl; ///< Optional. URL of the thumbnail (jpeg only) for the file
+    @JsonProperty("thumb_width") Integer thumbWidth; ///< Optional. Thumbnail width
+    @JsonProperty("thumb_height") Integer thumbHeight; ///< Optional. Thumbnail height
 
 }

@@ -23,8 +23,8 @@ public class Chat extends ApiObject{
     Long id; ///< Unique identifier for this chat, not exciding 1e13 by absolute value
     String type; ///< Type of the chat, one of “private”, “group” or “channel”
     String title; ///< Optional. Title of the chat, only for channels and group chat
-    String firstName; ///< Optional. Username of the chat, only for chats and channels if available
-    String lastName; ///< Optional. Interlocutor's first name for chats
-    String userName; ///< Optional. Interlocutor's last name for chats
+    @JsonProperty("first_name") String firstName; ///< Optional. Username of the chat, only for chats and channels if available
+    @JsonProperty("last_name") String lastName; ///< Optional. Interlocutor's first name for chats
+    @JsonProperty("user_name") String userName; ///< Optional. Interlocutor's last name for chats
 
 }

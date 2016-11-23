@@ -22,7 +22,7 @@ public class ForceReplyKeyboard extends ReplyKeyboard {
      * Shows reply interface to the user, as if they manually selected the bot‘s message and tapped
      * ’Reply'
      */
-    Boolean forceReply;
+    @JsonProperty("force_reply") Boolean forceReply;
     /**
      * Use this parameter if you want to force reply from specific users only. Targets: 1) users
      * that are @mentioned in the text of the Message object; 2) if the bot's message is a reply

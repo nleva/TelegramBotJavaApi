@@ -28,6 +28,6 @@ public class GetChatAdministrators extends ApiMethod {
 	/**
 	 * Unique identifier for the chat to send the message to (Or username for channels)
 	 */
-    String chatId; 
+    @JsonProperty("chat_id") String chatId; 
 
 }

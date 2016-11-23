@@ -17,7 +17,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper=true)
 @ToString(callSuper=true)
 public class UserProfilePhotos extends ApiObject {
-    Integer totalCount; ///< Total number of profile pictures the target user has
+    @JsonProperty("total_count") Integer totalCount; ///< Total number of profile pictures the target user has
     List<List<PhotoSize>> photos; ///< Requested profile pictures (in up to 4 sizes each)
 
 }

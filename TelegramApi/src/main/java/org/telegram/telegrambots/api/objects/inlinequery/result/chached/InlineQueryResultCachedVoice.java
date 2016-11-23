@@ -24,9 +24,9 @@ import lombok.ToString;
 @ToString(callSuper=true)
 public class InlineQueryResultCachedVoice extends InlineQueryResult{
     String id; ///< Unique identifier of this result, 1-64 bytes
-    String voiceFileId; ///< A valid file identifier for the voice message
+    @JsonProperty("voice_file_id") String voiceFileId; ///< A valid file identifier for the voice message
     String title; ///< Recording title
-    InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the voice recording
-    InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
+    @JsonProperty("input_message_content") InputMessageContent inputMessageContent; ///< Optional. Content of the message to be sent instead of the voice recording
+    @JsonProperty("reply_markup") InlineKeyboardMarkup replyMarkup; ///< Optional. Inline keyboard attached to the message
 
 }

@@ -33,12 +33,12 @@ public class KeyboardButton extends ApiObject{
      * If True, the user's phone number will be sent as a contact when the button is pressed.
      * Available in chats only
      */
-    Boolean requestContact;
+    @JsonProperty("request_contact") Boolean requestContact;
     /**
      * Optional.
      * If True, the user's current location will be sent when the button is pressed.
      * Available in chats only
      */
-    Boolean requestLocation;
+    @JsonProperty("request_location") Boolean requestLocation;
 
 }

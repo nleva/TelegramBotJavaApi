@@ -4,6 +4,8 @@ import javax.ws.rs.Path;
 
 import org.telegram.telegrambots.api.methods.send.ApiMethod;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -22,8 +24,8 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode(callSuper=false)
 public class AnswerCallbackQuery extends ApiMethod {
-    String callbackQueryId; ///< Unique identifier for the query to be answered
+    @JsonProperty("callback_query_id") String callbackQueryId; ///< Unique identifier for the query to be answered
     String text; ///< Text of the notification. If not specified, nothing will be shown to the user
-    Boolean showAlert; ///< Optional. If true, an alert will be shown by the client instead of a notificaiton at the top of the chat screen. Defaults to false.
+    @JsonProperty("show_alert") Boolean showAlert; ///< Optional. If true, an alert will be shown by the client instead of a notificaiton at the top of the chat screen. Defaults to false.
 
 }
