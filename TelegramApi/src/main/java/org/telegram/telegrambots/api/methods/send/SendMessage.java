@@ -1,5 +1,7 @@
 package org.telegram.telegrambots.api.methods.send;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -20,7 +22,7 @@ public class SendMessage extends ApiMethod {
 	 * Unique identifier for the target chat or username of the target channel
 	 * (in the format @channelusername)
 	 */
-	String	chatId;
+	@JsonProperty("chat_id") String chatId;
 	
 	/** Text of the message to be sent */
 	String	text;
@@ -29,25 +31,25 @@ public class SendMessage extends ApiMethod {
 	 * Send Markdown or HTML, if you want Telegram apps to show bold, italic,
 	 * fixed-width text or inline URLs in your bot's message.
 	 */
-	String	parseMode;
+	@JsonProperty("parse_mode") String parseMode;
 	
 	/** Disables link previews for links in this message */
-	Boolean	disableWebPagePreview;
+	@JsonProperty("disable_web_page_preview") Boolean disableWebPagePreview;
 	
 	/**
 	 * Sends the message silently. iOS users will not receive a notification,
 	 * Android users will receive a notification with no sound.
 	 */
-	Boolean	disableNotification;
+	@JsonProperty("disable_notification") Boolean disableNotification;
 	
 	/** If the message is a reply, ID of the original message */
-	Integer	replyToMessageId;
+	@JsonProperty("reply_to_message_id") Integer replyToMessageId;
 	
 	/**
 	 * Additional interface options. A JSON-serialized object for an inline
 	 * keyboard, custom reply keyboard, instructions to hide reply keyboard or
 	 * to force a reply from the user. FIXME type
 	 */
-	Object	replyMarkup;
+	@JsonProperty("reply_markup") Object replyMarkup;
 
 }
